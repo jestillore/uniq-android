@@ -1,6 +1,15 @@
 <resources>
     <string name="app_name">Uniq App</string>
 
+    <string name="account_name">Uniq App</string>
+    <string name="account_email">troll@uniqapp.com</string>
+
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="action_about">About</string>
+
+    <!-- Navigation Menu -->
+    <string name="nav_home">Home</string>
+    <string name="nav_favourites">Favourites</string>
+    <string name="nav_notifications">Notifications</string>
 </resources>
