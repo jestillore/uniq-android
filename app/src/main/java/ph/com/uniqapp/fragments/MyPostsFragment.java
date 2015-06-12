@@ -14,6 +14,12 @@ import android.widget.ListView;
 import java.io.IOException;
 
 import ph.com.uniqapp.EventActivity;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.melnykov.fab.FloatingActionButton;
+
+import ph.com.uniqapp.NewPostActivity;
 import ph.com.uniqapp.R;
 import ph.com.uniqapp.adapters.EventAdapter;
 import ph.com.uniqapp.model.Event;
@@ -25,7 +31,9 @@ import ph.com.uniqapp.utils.Base64;
 public class MyPostsFragment extends BaseFragment {
 
     EventAdapter adapter;
-
+    View view;
+    TextView startDate;
+    TextView endStart;
     public MyPostsFragment() {
 
     }
@@ -39,7 +47,17 @@ public class MyPostsFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         adapter = new EventAdapter(inflater, getContext());
-        return inflater.inflate(R.layout.fragment_my_posts, container, false);
+        view = inflater.inflate(R.layout.fragment_my_posts, container, false);
+        FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), NewPostActivity.class);
+                getActivity().startActivity(intent);
+            }
+        });
+        return view;
     }
 
     @Override

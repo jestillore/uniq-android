@@ -15,4 +15,15 @@
     <string name="nav_buddies">Buddies</string>
     <string name="nav_messages">Messages</string>
     <string name="nav_my_posts">My Posts</string>
+
+    <!-- New Post Hints -->
+
+    <string name="hint_title">Title</string>
+    <string name="hint_description">Description</string>
+    <string name="hint_slug">Slug</string>
+    <string name="hint_start_date">Start Date</string>
+    <string name="hint_end_date">End Date</string>
+    <string name="hint_venue">Venue</string>
+    <string name="hint_post">Post</string>
+
 </resources>
