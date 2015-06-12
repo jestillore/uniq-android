@@ -11,8 +11,8 @@ import ph.com.uniqapp.R;
  */
 public class LoginActivity extends FragmentActivity{
     @Override
-    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
-        setContentView(R.layout.activity_login);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login2);
     }
 }
