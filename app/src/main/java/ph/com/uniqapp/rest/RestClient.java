@@ -11,9 +11,9 @@ import retrofit.converter.GsonConverter;
  * Created by waelhe on 6/12/2015.
  */
 public class RestClient {
-    private static final String BASE_URL = "";
+    private static final String BASE_URL = "http://10.11.15.248";
     private static ApiService apiService;
-    private RestClient() {
+    public RestClient() {
         Gson gson = new GsonBuilder().create();
 
         RequestInterceptor interceptor = new RequestInterceptor() {
@@ -33,7 +33,7 @@ public class RestClient {
 
     }
 
-    public static ApiService getApiService(){
+    public ApiService getApiService(){
         return apiService;
     }
 
