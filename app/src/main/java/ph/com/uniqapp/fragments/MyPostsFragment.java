@@ -105,5 +105,8 @@ public class MyPostsFragment extends BaseFragment {
             }
         });
         myPostsList.setAdapter(adapter);
+
+        FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
+        fab.attachToListView(myPostsList);
     }
 }

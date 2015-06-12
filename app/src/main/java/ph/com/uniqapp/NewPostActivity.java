@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.format.DateFormat;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
@@ -31,6 +33,12 @@ public class NewPostActivity extends AppCompatActivity implements CalendarDatePi
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newpost);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setTitle("New Event");
+
         now = DateTime.now();
         fm = getSupportFragmentManager();
         dpb = CalendarDatePickerDialog
@@ -43,6 +51,15 @@ public class NewPostActivity extends AppCompatActivity implements CalendarDatePi
         startDate.setOnClickListener(this);
         endDate.setOnClickListener(this);
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
