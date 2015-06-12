@@ -2,8 +2,8 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="MaterialNavigationDrawerTheme">
-        <item name="colorPrimary">#ffff0000</item>
-        <item name="colorPrimaryDark">#c8ff0000</item>
+        <item name="colorPrimary">#ff999967</item>
+        <item name="colorPrimaryDark">#c8cccc9a</item>
         <item name="colorAccent">#FFFFFF</item>
     </style>
 
