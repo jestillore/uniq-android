@@ -1,9 +1,11 @@
 package ph.com.uniqapp.model;
 
+import java.io.Serializable;
+
 /**
  * Created by waelhe on 6/12/2015.
  */
-public class Event {
+public class Event implements Serializable {
     private int id;
     private String title;
     private String description;

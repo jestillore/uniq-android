@@ -65,6 +65,10 @@ public class EventAdapter extends BaseAdapter {
         else {
             holder = (ViewHolder) convertView.getTag();
         }
+        holder.name.setText(event.getTitle());
+        holder.date.setText(event.getStart_date() + " - " + event.getEnd_date());
+        holder.location.setText(event.getVenue());
+        holder.category.setText("TECH");
         Picasso.with(context).load(R.drawable.troll).resize(100, 100).into(holder.image);
         return convertView;
     }
