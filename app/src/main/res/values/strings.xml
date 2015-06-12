@@ -17,6 +17,7 @@
     <string name="nav_buddies">Buddies</string>
     <string name="nav_messages">Messages</string>
     <string name="nav_my_posts">My Posts</string>
+    <string name="nav_categories">Categories</string>
 
     <!-- New Post Hints -->
 
@@ -30,5 +31,6 @@
     <string name="hint_username">Username</string>
     <string name="hint_password">Password</string>
     <string name="login">Login</string>
+    <string name="hint_email">Email</string>
 
 </resources>
