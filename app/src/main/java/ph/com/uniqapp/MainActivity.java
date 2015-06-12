@@ -11,6 +11,7 @@ import it.neokree.materialnavigationdrawer.elements.MaterialAccount;
 import it.neokree.materialnavigationdrawer.elements.MaterialSection;
 import it.neokree.materialnavigationdrawer.elements.listeners.MaterialAccountListener;
 import ph.com.uniqapp.fragments.BuddiesFragment;
+import ph.com.uniqapp.fragments.CategoriesFragment;
 import ph.com.uniqapp.fragments.FavouritesFragment;
 import ph.com.uniqapp.fragments.HomeFragment;
 import ph.com.uniqapp.fragments.MessagesFragment;
@@ -53,15 +54,17 @@ public class MainActivity extends MaterialNavigationDrawer implements MaterialAc
         MaterialSection buddies = this.newSection(getString(R.string.nav_buddies), R.drawable.ic_buddies, BuddiesFragment.newInstance());
         MaterialSection messages = this.newSection(getString(R.string.nav_messages), R.drawable.ic_messages, MessagesFragment.newInstance());
         MaterialSection myPosts = this.newSection(getString(R.string.nav_my_posts), R.drawable.ic_my_posts, MyPostsFragment.newInstance());
+        MaterialSection categories = this.newSection(getString(R.string.nav_categories), R.drawable.ic_categories, CategoriesFragment.newInstance());
 
         notifications.setNotifications(2);
 
         this.addSection(home);
         this.addSection(favourites);
-        this.addSection(notifications);
-        this.addSection(buddies);
-        this.addSection(messages);
+//        this.addSection(notifications);
+//        this.addSection(buddies);
+//        this.addSection(messages);
         this.addSection(myPosts);
+        this.addSection(categories);
     }
 
     @Override
