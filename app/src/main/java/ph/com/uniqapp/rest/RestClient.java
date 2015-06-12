@@ -3,6 +3,7 @@ package ph.com.uniqapp.rest;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import retrofit.RequestInterceptor;
 import retrofit.RestAdapter;
 import retrofit.converter.GsonConverter;
 
@@ -10,10 +11,17 @@ import retrofit.converter.GsonConverter;
  * Created by waelhe on 6/12/2015.
  */
 public class RestClient {
-    private static final String BASE_URL = "http://ec2-52-1-43-237.compute-1.amazonaws.com";
-    private ApiService apiService;
-    public RestClient() {
+    private static final String BASE_URL = "";
+    private static ApiService apiService;
+    private RestClient() {
         Gson gson = new GsonBuilder().create();
+
+        RequestInterceptor interceptor = new RequestInterceptor() {
+            @Override
+            public void intercept(RequestFacade request) {
+                request.addHeader("Authorization", "");
+            }
+        };
 
         RestAdapter restAdapter = new RestAdapter.Builder()
                 .setEndpoint(BASE_URL)
@@ -25,7 +33,7 @@ public class RestClient {
 
     }
 
-    public ApiService getApiService(){
+    public static ApiService getApiService(){
         return apiService;
     }
 
