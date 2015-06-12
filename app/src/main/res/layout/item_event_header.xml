@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@drawable/troll"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/iv_image"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_margin="5dp"
+            android:text="sa imong heart"
+            android:layout_weight=".4"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_venue"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_margin="5dp"
+            android:text="Trollers"
+            android:layout_weight=".6"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_category"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TITLE HERE"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_margin="5dp"
+        android:id="@+id/tv_event_title"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight=".3"
+            android:layout_margin="5dp"
+            android:text="December 6, 2015 - December 8, 2015"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_start_end_date"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Lorem ipsum dolor itsem basta description ni dre"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_description"/>
+</LinearLayout>
