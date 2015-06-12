@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Uniq App</string>
     <string name="app_slogan">Unsa\'y ayo ron?</string>
+    <string name="new_event">New Event</string>
 
     <string name="account_name">Uniq App</string>
     <string name="account_email">troll@uniqapp.com</string>
