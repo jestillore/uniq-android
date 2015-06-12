@@ -1,5 +1,6 @@
 package ph.com.uniqapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,7 +16,6 @@ import ph.com.uniqapp.fragments.HomeFragment;
 import ph.com.uniqapp.fragments.MessagesFragment;
 import ph.com.uniqapp.fragments.MyPostsFragment;
 import ph.com.uniqapp.fragments.NotificationsFragment;
-import ph.com.uniqapp.rest.RestClient;
 
 
 public class MainActivity extends MaterialNavigationDrawer implements MaterialAccountListener {
@@ -54,6 +54,8 @@ public class MainActivity extends MaterialNavigationDrawer implements MaterialAc
         MaterialSection messages = this.newSection(getString(R.string.nav_messages), R.drawable.ic_messages, MessagesFragment.newInstance());
         MaterialSection myPosts = this.newSection(getString(R.string.nav_my_posts), R.drawable.ic_my_posts, MyPostsFragment.newInstance());
 
+        notifications.setNotifications(2);
+
         this.addSection(home);
         this.addSection(favourites);
         this.addSection(notifications);
@@ -64,7 +66,8 @@ public class MainActivity extends MaterialNavigationDrawer implements MaterialAc
 
     @Override
     public void onAccountOpening(MaterialAccount materialAccount) {
-        Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, ProfileActivity.class);
+        startActivity(intent);
     }
 
     @Override
