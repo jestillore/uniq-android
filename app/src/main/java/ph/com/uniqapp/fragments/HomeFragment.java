@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.io.IOException;
 
@@ -70,7 +69,7 @@ public class HomeFragment extends BaseFragment {
             event.setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
             event.setStart_date("2015-06-12 18:00:00");
             event.setEnd_date("2015-06-13 15:30:00");
-            event.setSlug("cebu-hackathon");
+            event.setSlug("cebu-hackathon-" + (i + 1));
             event.setVenue("The TIDE Cebu");
             adapter.addItem(event);
         }
