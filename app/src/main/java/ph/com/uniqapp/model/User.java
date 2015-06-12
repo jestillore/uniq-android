@@ -4,7 +4,7 @@ package ph.com.uniqapp.model;
  * Created by waelhe on 6/12/2015.
  */
 public class User {
-    private String id;
+    private int id;
     private String username;
     private String password;
     private String email;
@@ -13,13 +13,13 @@ public class User {
     private String birth_date;
     private String gender;
     private String location;
-    private String role_id;
+    private int role_id;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -87,11 +87,11 @@ public class User {
         this.location = location;
     }
 
-    public String getRole_id() {
+    public int getRole_id() {
         return role_id;
     }
 
-    public void setRole_id(String role_id) {
+    public void setRole_id(int role_id) {
         this.role_id = role_id;
     }
 }

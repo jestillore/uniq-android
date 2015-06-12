@@ -4,17 +4,17 @@ package ph.com.uniqapp.model;
  * Created by waelhe on 6/12/2015.
  */
 public class Category {
-    private String id;
+    private int id;
     private String name;
     private String description;
     private String slug;
     private String restricted;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

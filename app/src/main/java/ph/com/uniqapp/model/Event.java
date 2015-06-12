@@ -4,7 +4,7 @@ package ph.com.uniqapp.model;
  * Created by waelhe on 6/12/2015.
  */
 public class Event {
-    private String id;
+    private int id;
     private String title;
     private String description;
     private String slug;
@@ -12,11 +12,11 @@ public class Event {
     private String end_date;
     private String venue;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

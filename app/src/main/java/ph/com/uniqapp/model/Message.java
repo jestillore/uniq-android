@@ -4,33 +4,33 @@ package ph.com.uniqapp.model;
  * Created by waelhe on 6/12/2015.
  */
 public class Message {
-    private String id;
-    private String sender_id;
-    private String recipient_id;
+    private int id;
+    private int sender_id;
+    private int recipient_id;
     private String message;
     private String status;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getSender_id() {
+    public int getSender_id() {
         return sender_id;
     }
 
-    public void setSender_id(String sender_id) {
+    public void setSender_id(int sender_id) {
         this.sender_id = sender_id;
     }
 
-    public String getRecipient_id() {
+    public int getRecipient_id() {
         return recipient_id;
     }
 
-    public void setRecipient_id(String recipient_id) {
+    public void setRecipient_id(int recipient_id) {
         this.recipient_id = recipient_id;
     }
 
