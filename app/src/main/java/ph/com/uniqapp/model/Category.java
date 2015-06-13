@@ -9,6 +9,7 @@ public class Category {
     private String description;
     private String slug;
     private String restricted;
+    private boolean followed;
 
     public int getId() {
         return id;
@@ -48,5 +49,13 @@ public class Category {
 
     public void setRestricted(String restricted) {
         this.restricted = restricted;
+    }
+
+    public boolean isFollowed() {
+        return followed;
+    }
+
+    public void setFollowed(boolean followed) {
+        this.followed = followed;
     }
 }
