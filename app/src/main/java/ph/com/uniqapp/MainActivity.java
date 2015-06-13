@@ -33,6 +33,9 @@ public class MainActivity extends MaterialNavigationDrawer implements MaterialAc
 
         switch (id) {
             case R.id.action_settings:
+                Intent intent = new Intent(this, SettingsActivity.class);
+                startActivity(intent);
+                return true;
             case R.id.action_about:
                 return true;
         }
