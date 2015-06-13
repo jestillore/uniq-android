@@ -91,11 +91,7 @@ public class HomeFragment extends BaseFragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(getContext(), EventActivity.class);
                 Event event = adapter.getItem(position);
-                try {
-                    intent.putExtra("event", Base64.encodeObject(event));
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                Uniq.getInstance().setCurrentEvent(event);
                 startActivity(intent);
             }
         });

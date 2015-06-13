@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import ph.com.uniqapp.model.AccessToken;
 import ph.com.uniqapp.model.Category;
+import ph.com.uniqapp.model.Event;
 import ph.com.uniqapp.model.User;
 
 /**
@@ -14,6 +15,7 @@ public class Uniq {
     private User user = null;
     private AccessToken accessToken = null;
     private ArrayList<Category> mine = new ArrayList<>();
+    private Event current;
 
     private static Uniq uniq = null;
 
@@ -48,5 +50,13 @@ public class Uniq {
 
     public ArrayList<Category> getMine() {
         return mine;
+    }
+
+    public void setCurrentEvent(Event event) {
+        this.current = event;
+    }
+
+    public Event getCurrentEvent() {
+        return current;
     }
 }

@@ -30,10 +30,5 @@
             android:layout_height="wrap_content"
             android:text="Troll Warlord is under a tree roaming around"
             android:id="@+id/tv_comment"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Today Tomorrow"
-            android:id="@+id/tv_date"/>
     </LinearLayout>
 </LinearLayout>

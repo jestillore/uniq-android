@@ -22,6 +22,7 @@ import com.melnykov.fab.FloatingActionButton;
 
 import ph.com.uniqapp.NewPostActivity;
 import ph.com.uniqapp.R;
+import ph.com.uniqapp.Uniq;
 import ph.com.uniqapp.adapters.EventAdapter;
 import ph.com.uniqapp.model.Event;
 import ph.com.uniqapp.rest.RestClient;
@@ -107,11 +108,7 @@ public class MyPostsFragment extends BaseFragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(getContext(), EventActivity.class);
                 Event event = adapter.getItem(position);
-                try {
-                    intent.putExtra("event", Base64.encodeObject(event));
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                Uniq.getInstance().setCurrentEvent(event);
                 startActivity(intent);
             }
         });

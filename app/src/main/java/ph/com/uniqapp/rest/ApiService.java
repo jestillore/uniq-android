@@ -6,6 +6,7 @@ import ph.com.uniqapp.model.AccessToken;
 import java.util.ArrayList;
 
 import ph.com.uniqapp.model.Category;
+import ph.com.uniqapp.model.Comment;
 import ph.com.uniqapp.model.Event;
 
 import retrofit.Callback;
@@ -49,4 +50,20 @@ public interface ApiService{
 
     @POST("/events")
     void postEvent(@Body Event event, Callback<Object> cb);
+
+    @GET("/event/favorites")
+    void getFavourites(Callback<ArrayList<Event>> cb);
+
+    @GET("/event/mark-favorite/{id}")
+    void markFavourite(@Path("id") int id, Callback<Object> cb);
+
+    @GET("/event/unmark-favorite/{id}")
+    void removeFavourite(@Path("id") int id, Callback<Object> cb);
+
+    @FormUrlEncoded
+    @POST("/comments")
+    void postComment(@Field("event_id") int id, @Field("content") String content, Callback<Object> cb);
+
+    @GET("/event/comments/{id}")
+    void getComments(@Path("id") int id, Callback<ArrayList<Comment>> cb);
 }

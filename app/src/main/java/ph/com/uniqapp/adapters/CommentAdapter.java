@@ -64,9 +64,8 @@ public class CommentAdapter extends BaseAdapter{
         else {
             holder = (ViewHolder) convertView.getTag();
         }
-        holder.name.setText("Test");
-        holder.comment.setText("awafs");
-        holder.date.setText("awafs");
+        holder.name.setText(comment.getUsername());
+        holder.comment.setText(comment.getContent());
         Picasso.with(context).load(R.drawable.troll).resize(100, 100).into(holder.image);
         return convertView;
     }
@@ -79,13 +78,11 @@ public class CommentAdapter extends BaseAdapter{
 
         public TextView name;
         public TextView comment;
-        public TextView date;
         public ImageView image;
 
         public ViewHolder(View view) {
             this.name = (TextView) view.findViewById(R.id.tv_name);
             this.comment = (TextView) view.findViewById(R.id.tv_comment);
-            this.date = (TextView) view.findViewById(R.id.tv_date);
             this.image = (ImageView) view.findViewById(R.id.iv_image);
         }
 
