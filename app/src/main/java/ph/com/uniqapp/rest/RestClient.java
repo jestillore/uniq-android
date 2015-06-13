@@ -3,6 +3,7 @@ package ph.com.uniqapp.rest;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import ph.com.uniqapp.Uniq;
 import retrofit.RequestInterceptor;
 import retrofit.RestAdapter;
 import retrofit.converter.GsonConverter;
@@ -19,7 +20,9 @@ public class RestClient {
         RequestInterceptor interceptor = new RequestInterceptor() {
             @Override
             public void intercept(RequestFacade request) {
-                request.addHeader("Authorization", "");
+                if(Uniq.getInstance().getAccessToken() != null) {
+                    request.addHeader("Authorization", Uniq.getInstance().getAccessToken().getToken_type() + " " +Uniq.getInstance().getAccessToken().getAccess_token());
+                }
             }
         };
 

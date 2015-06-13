@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ph.com.uniqapp" >
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ph.com.uniqapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -12,15 +13,10 @@
 
     <application
         android:allowBackup="true"
+        tools:replace="android:icon"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity android:name=".authentication.LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".NewPostActivity"
             android:label="@string/new_event" >
 
@@ -28,11 +24,17 @@
         <activity
             android:name=".SplashScreenActivity"
             android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".ProfileActivity" android:label="Profile"></activity>
         <activity android:name=".EventActivity"></activity>
         <activity android:name=".authentication.LoginActivity"></activity>
+        <activity android:name=".authentication.RegisterActivity"></activity>
+
     </application>
 
 </manifest>
