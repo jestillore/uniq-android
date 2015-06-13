@@ -1,6 +1,9 @@
 package ph.com.uniqapp;
 
+import java.util.ArrayList;
+
 import ph.com.uniqapp.model.AccessToken;
+import ph.com.uniqapp.model.Category;
 import ph.com.uniqapp.model.User;
 
 /**
@@ -10,6 +13,7 @@ public class Uniq {
 
     private User user = null;
     private AccessToken accessToken = null;
+    private ArrayList<Category> mine = new ArrayList<>();
 
     private static Uniq uniq = null;
 
@@ -38,4 +42,11 @@ public class Uniq {
         this.accessToken = accessToken;
     }
 
+    public void setMine(ArrayList<Category> categories) {
+        this.mine = categories;
+    }
+
+    public ArrayList<Category> getMine() {
+        return mine;
+    }
 }

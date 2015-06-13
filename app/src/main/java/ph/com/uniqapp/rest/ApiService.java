@@ -9,6 +9,7 @@ import ph.com.uniqapp.model.Category;
 import ph.com.uniqapp.model.Event;
 
 import retrofit.Callback;
+import retrofit.http.Body;
 import retrofit.http.Field;
 import retrofit.http.FormUrlEncoded;
 import retrofit.http.GET;
@@ -43,4 +44,9 @@ public interface ApiService{
     @GET("/events")
     void getEventFeeds(Callback<ArrayList<Event>> cb);
 
+    @GET("/event/my-events")
+    void getMyEvents(Callback<ArrayList<Event>> cb);
+
+    @POST("/events")
+    void postEvent(@Body Event event, Callback<Object> cb);
 }

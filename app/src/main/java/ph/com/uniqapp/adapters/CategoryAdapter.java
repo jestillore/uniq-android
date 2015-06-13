@@ -57,6 +57,7 @@ public class CategoryAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
         holder.name.setText(category.getName());
+        holder.description.setText(category.getDescription());
         return convertView;
     }
 
@@ -67,9 +68,11 @@ public class CategoryAdapter extends BaseAdapter {
     static class ViewHolder {
 
         public TextView name;
+        public TextView description;
 
         public ViewHolder(View view) {
             this.name = (TextView) view.findViewById(R.id.name);
+            this.description = (TextView) view.findViewById(R.id.description);
         }
 
     }

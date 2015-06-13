@@ -50,7 +50,7 @@ public class CategoriesFragment extends BaseFragment {
         final ListView categories = (ListView) view.findViewById(R.id.categories);
         categories.setAdapter(adapter);
         RestClient client = new RestClient();
-        client.getApiService().getAllCategories(new Callback<ArrayList<Category>>() {
+        client.getApiService().getMyCategories(new Callback<ArrayList<Category>>() {
             @Override
             public void success(ArrayList<Category> cats, Response response) {
                 for (Category category : cats) {

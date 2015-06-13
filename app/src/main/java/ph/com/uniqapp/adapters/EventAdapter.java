@@ -14,6 +14,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 import ph.com.uniqapp.R;
+import ph.com.uniqapp.model.Category;
 import ph.com.uniqapp.model.Event;
 
 /**
@@ -68,8 +69,11 @@ public class EventAdapter extends BaseAdapter {
         holder.name.setText(event.getTitle());
         holder.date.setText(event.getStart_date() + " - " + event.getEnd_date());
         holder.location.setText(event.getVenue());
-        holder.category.setText("TECH");
-        Picasso.with(context).load(R.drawable.troll).resize(100, 100).into(holder.image);
+        Category category = event.getCategory();
+        if (category != null) {
+            holder.category.setText(event.getCategory().getName());
+        }
+//        Picasso.with(context).load(R.drawable.troll).resize(100, 100).into(holder.image);
         return convertView;
     }
 

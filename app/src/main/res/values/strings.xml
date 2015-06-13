@@ -31,7 +31,8 @@
     <string name="hint_username">Username</string>
     <string name="hint_password">Password</string>
     <string name="login">Login</string>
-    <string name="hint_email">Email</string>
+    <string name="days_offset">Days Offset Feeds</string>
+    <string name="placeholder_category">Category</string>
 
     <!-- hint email -->
     <string name="hint_email">Email</string>

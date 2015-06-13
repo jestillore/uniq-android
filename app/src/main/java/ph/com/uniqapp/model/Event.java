@@ -1,6 +1,7 @@
 package ph.com.uniqapp.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  * Created by waelhe on 6/12/2015.
@@ -10,9 +11,11 @@ public class Event implements Serializable {
     private String title;
     private String description;
     private String slug;
-    private String start_date;
-    private String end_date;
+    private String start_datetime;
+    private String end_datetime;
     private String venue;
+    public int category_id;
+    private ArrayList<Category> categories;
 
     public int getId() {
         return id;
@@ -47,19 +50,19 @@ public class Event implements Serializable {
     }
 
     public String getStart_date() {
-        return start_date;
+        return start_datetime;
     }
 
     public void setStart_date(String start_date) {
-        this.start_date = start_date;
+        this.start_datetime = start_date;
     }
 
     public String getEnd_date() {
-        return end_date;
+        return end_datetime;
     }
 
     public void setEnd_date(String end_date) {
-        this.end_date = end_date;
+        this.end_datetime = end_date;
     }
 
     public String getVenue() {
@@ -68,5 +71,15 @@ public class Event implements Serializable {
 
     public void setVenue(String venue) {
         this.venue = venue;
+    }
+
+    public void setCategoryId(int id) {
+        this.category_id = id;
+    }
+
+    public Category getCategory() {
+        if (categories.size() == 0)
+            return null;
+        return categories.get(0);
     }
 }
